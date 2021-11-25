@@ -2,8 +2,12 @@ package com.example.myHeroAcademia.utils;
 
 import android.net.Uri;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Scanner;
 
 public class NetworkUtils {
     final static String BASE_URL = "https://akabab.github.io/superhero-api/api";
@@ -36,5 +40,20 @@ public class NetworkUtils {
         return url;
     }
 
+    public static String getResponseFromHttpUrl(URL url) throws IOException {
+        HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+        InputStream is = urlConnection.getInputStream();
 
+        Scanner scan = new Scanner(is);
+        scan.useDelimiter("\\A");
+        try {
+            if (scan.hasNext()) {
+                return scan.next();
+            } else {
+                return null;
+            }
+        } finally {
+            urlConnection.disconnect();
+        }
+    }
 }
