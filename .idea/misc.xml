@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Sergio/AndroidStudioProjects/MyHeroAcademia/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Sergio/AndroidStudioProjects/MyHeroAcademia/app/src/main/res/menu/options_menu.xml" value="0.2" />
+        <entry key="..\:/Users/Sergio/AndroidStudioProjects/MyHeroAcademia/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14270833333333333" />
+        <entry key="..\:/Users/Sergio/AndroidStudioProjects/MyHeroAcademia/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Sergio/AndroidStudioProjects/MyHeroAcademia/app/src/main/res/menu/options_menu.xml" value="0.4" />
         <entry key="..\:/Users/Sergio/AndroidStudioProjects/UD2_1/app/src/main/res/layout/activity_main.xml" value="0.1" />
       </map>
     </option>

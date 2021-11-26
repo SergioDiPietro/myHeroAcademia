@@ -4,21 +4,36 @@
     android:layout_height="match_parent"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#0B0B61">
 
     <EditText
         android:id="@+id/hero_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/hero_id_placeholder"/>
+        android:gravity="center"
+        android:hint="@string/hero_id_placeholder"
+        android:background="#08088A"
+        android:textColor="#FFF"
+        android:textColorHint="#2196F3"/>
 
     <TextView
         android:id="@+id/url_display"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:textSize="22sp"
-        android:layout_marginTop="8dp"
-        android:text="@string/url_display_placeholder"/>
+        android:layout_marginTop="20dp"
+        android:text="@string/url_display_placeholder"
+        android:textColor="#FFF"
+        android:background="#08088A"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#FFF"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +44,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/result_placeholder"
-            android:textSize="18sp"/>
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="5dp"
+            android:textSize="18sp"
+            android:background="#FF0000"
+            android:textColor="#FF0"/>
 
     </ScrollView>
 </LinearLayout>
