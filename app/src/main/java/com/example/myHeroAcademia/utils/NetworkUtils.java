@@ -11,21 +11,25 @@ import java.util.Scanner;
 
 public class NetworkUtils {
     final static String BASE_URL = "https://akabab.github.io/superhero-api/api";
-    final static String ALL_HEROES_PARAM = "/all";
-    final static String SINGLE_HERO_PARAM = "/id/";
+    final static String ALL_HEROES_PARAM = "all";
+    final static String SINGLE_HERO_PARAM = "id";
     final static String URL_END = ".json";
 
     public static URL generateUrl() {
-        Uri buildUri = Uri.parse(BASE_URL + ALL_HEROES_PARAM + URL_END).buildUpon().build();
+        Uri buildUri = Uri.withAppendedPath(Uri.parse(BASE_URL), ALL_HEROES_PARAM + URL_END)
+                .buildUpon().build();
 
         return UriToURL(buildUri);
     }
 
     public static URL generateUrl(char heroID) {
-        Uri buildUri = Uri.parse(
-                BASE_URL + SINGLE_HERO_PARAM + heroID + URL_END).buildUpon().build();
+        Uri buildUri = Uri
+                .withAppendedPath(Uri.parse(BASE_URL), SINGLE_HERO_PARAM)
+                .buildUpon().build();
 
-        return UriToURL(buildUri);
+        Uri buildUri2 = Uri.withAppendedPath(buildUri, heroID + URL_END);
+
+        return UriToURL(buildUri2);
     }
 
     private static URL UriToURL(Uri uri) {
